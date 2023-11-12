@@ -24,6 +24,10 @@ public class App extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.getWriter().println("<p>Hello!</p>");
+
+        String repoName = System.getProperty("redfig.reponame");
+        String repoKey = System.getProperty("redfig.repokey");
+        boolean repoKeyExists = repoKey.length() > 0;
+        response.getWriter().println("<p>Hello! Repo is " + repoName + " and repoKey is present?: " + repoKeyExists);
     }
 }
