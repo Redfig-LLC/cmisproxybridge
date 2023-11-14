@@ -6,14 +6,16 @@ public class CMISProxyServlet extends AbstractCmisProxyServlet {
 
     @Override
     protected String getRepositoryUniqueName() {
-        return "MySampleRepository";
+        String repoName = System.getProperty("redfig.reponame");
+        return repoName;
     }
 
     @Override
     // For applications in production, use a secure location to store the secret
     // key.
     protected String getRepositoryKey() {
-        return "MFWeThIiC1utyer";
+        String repoKey = System.getProperty("redfig.repokey");
+        return repoKey;
     }
 
 }
