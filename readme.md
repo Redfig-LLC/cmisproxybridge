@@ -14,6 +14,6 @@ When uploading the `.war` file  to SAP Neo, add the following as the "JVM Argume
 
 `-Dredfig.repokey="<your repo key>" -Dredfig.reponame="<your repo name>"`
 
-Note that Repo Name is visible from the Neo cockpit, the Repo Key is always a secret. If you do not know your repo, the only available route is to reset the repo key from the Neo CLI tool. Keep in mind this will require you to update the property on any existing proxy bridges.
+Note that Repo Name is visible from the Neo cockpit, the Repo Key is always a secret. If you do not know your repo's key, the only available route is to reset the repo key from the Neo CLI tool. Keep in mind this will require you to update the property on any existing proxy bridges.
 
 If you do not have the source code to the existing applications and are unsure if they have the key hard-coded in, you are SOL. Best I have found is to recreate the java app from scratch (hence this repository) and upload the app/replace the destination (don't forget authorization of the Basic user)
